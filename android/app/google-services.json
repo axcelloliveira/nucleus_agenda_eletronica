@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780290941174",
+    "project_id": "agenda-eletronica-c16a0",
+    "storage_bucket": "agenda-eletronica-c16a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780290941174:android:0987014eab0c8480558cd7",
+        "android_client_info": {
+          "package_name": "com.example.agenda_eletronica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780290941174-rbvqkgvdnnec3o64fratcv4pk4kavn43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9yGTdEqHGOdKA37fOkv-MaMAJi5y5zmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780290941174-rbvqkgvdnnec3o64fratcv4pk4kavn43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
