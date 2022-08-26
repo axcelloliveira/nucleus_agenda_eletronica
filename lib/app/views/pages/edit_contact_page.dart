@@ -44,9 +44,24 @@ class _EditContactPageState extends State<EditContactPage> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: IconButton(
-              onPressed: () {
-                controller.deleteContact(context, widget.model2!.reference);
-              },
+              onPressed: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: const Text('Agenda'),
+                  content: const Text('Confirma a exclusão deste contato?'),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'Cancel'),
+                      child: const Text('Cancelar'),
+                    ),
+                    TextButton(
+                      onPressed: () => controller.deleteContact(
+                          context, widget.model2!.reference),
+                      child: const Text('Confirmar'),
+                    ),
+                  ],
+                ),
+              ),
               icon: const Icon(Icons.delete),
             ),
           )

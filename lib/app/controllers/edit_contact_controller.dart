@@ -115,5 +115,7 @@ class EditContactController extends GetxController {
     } catch (error) {
       ScaffoldMessenger.of(context!).showSnackBar(errorDeleteSnackbar);
     }
+
+    Get.offAll(const ContactPage());
   }
 }
