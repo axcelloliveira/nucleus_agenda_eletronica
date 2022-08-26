@@ -7,13 +7,8 @@ class ContactController {
   ContactController(this._contactRepository);
 
   Stream<List<ContactModel>>? contactStream;
-  String getInitials(String bankAccountName) => bankAccountName.isNotEmpty
-      ? bankAccountName
-          .trim()
-          .split(RegExp(' +'))
-          .map((s) => s[0])
-          .take(2)
-          .join()
+  String getInitials(String name) => name.isNotEmpty
+      ? name.trim().split(RegExp(' +')).map((s) => s[0]).take(2).join()
       : '';
   getContact() {
     contactStream = _contactRepository.getContacts();
