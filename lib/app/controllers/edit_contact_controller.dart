@@ -101,9 +101,19 @@ class EditContactController extends GetxController {
 
         _contactRepository.editContact(model);
       } catch (error) {
-        ScaffoldMessenger.of(context!).showSnackBar(errorrSnackBar);
+        ScaffoldMessenger.of(context!).showSnackBar(errorSnackBar);
       }
       Get.offAll(const ContactPage());
+    }
+  }
+
+  deleteContact([BuildContext? context, DocumentReference? reference]) {
+    try {
+      ScaffoldMessenger.of(context!).showSnackBar(successDeleteSnackbar);
+
+      _contactRepository.deleteContact(reference!);
+    } catch (error) {
+      ScaffoldMessenger.of(context!).showSnackBar(errorDeleteSnackbar);
     }
   }
 }

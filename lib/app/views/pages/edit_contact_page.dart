@@ -37,6 +37,21 @@ class _EditContactPageState extends State<EditContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text('Editar contato'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: () {
+                controller.deleteContact(context, widget.model2!.reference);
+              },
+              icon: const Icon(Icons.delete),
+            ),
+          )
+        ],
+      ),
       body: Form(
         key: controller.key,
         child: ListView(

@@ -4,6 +4,13 @@ const successSnackBar = SnackBar(
   content: Text('Contato adicionado com sucesso'),
 );
 
-const errorrSnackBar = SnackBar(
+const errorSnackBar = SnackBar(
   content: Text('Contato adicionado com sucesso'),
+);
+
+const successDeleteSnackbar = SnackBar(
+  content: Text('Contato excluído com sucesso'),
+);
+const errorDeleteSnackbar = SnackBar(
+  content: Text('Contato excluído com sucesso'),
 );

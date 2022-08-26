@@ -1,4 +1,5 @@
 import 'package:agenda_eletronica/app/models/contact_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class IContactRepository {
   Stream<List<ContactModel>> getContacts();
@@ -7,5 +8,5 @@ abstract class IContactRepository {
 
   Future editContact(ContactModel model);
 
-  Future deleteContact(ContactModel model);
+  Future deleteContact(DocumentReference document);
 }
