@@ -23,10 +23,15 @@ class _AddContactPageState extends State<AddContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Novo Contato'),
+      ),
       body: Form(
         key: controller.key,
         child: ListView(
           children: [
+            const SizedBox(height: 22),
+
             CustomImageContainer(controller),
             const SizedBox(height: 10),
             CustomTextField(

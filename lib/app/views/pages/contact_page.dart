@@ -33,7 +33,7 @@ class _ContactPageState extends State<ContactPage> {
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
           onPressed: () {
-            Get.offAll(() => const AddContactPage());
+            Get.to(() => const AddContactPage());
           },
         ),
         body: GetBuilder<ContactController>(
@@ -81,7 +81,7 @@ class _ContactPageState extends State<ContactPage> {
                       subtitle: Text(model.telefone1.toString()),
                       trailing: const Icon(Icons.arrow_forward_ios),
                       onTap: () {
-                        Get.offAll(() => EditContactPage(model2: model));
+                        Get.to(() => EditContactPage(model2: model));
                       },
                     ),
                   );

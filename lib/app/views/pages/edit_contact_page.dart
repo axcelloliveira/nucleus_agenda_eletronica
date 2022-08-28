@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import '../../controllers/edit_contact_controller.dart';
 import '../../repositories/contact_repository.dart';
 import '../components/edit_contacts_components/custom_image_container_edit.dart';
+import '../components/edit_contacts_components/custom_text_field_number_edit.dart';
 
 class EditContactPage extends StatefulWidget {
   EditContactPage({Key? key, this.model2}) : super(key: key);
@@ -91,7 +92,7 @@ class _EditContactPageState extends State<EditContactPage> {
             Row(
               children: [
                 Expanded(
-                  child: CustomTextFieldEdit(
+                  child: CustomTextFieldNumberEdit(
                     controller,
                     hint: 'Primeiro telefone',
                     label: 'Telefone',
@@ -100,7 +101,7 @@ class _EditContactPageState extends State<EditContactPage> {
                   ),
                 ),
                 Expanded(
-                  child: CustomTextFieldEdit(
+                  child: CustomTextFieldNumberEdit(
                     controller,
                     hint: 'Segundo telefone',
                     label: 'Telefone',
@@ -117,7 +118,7 @@ class _EditContactPageState extends State<EditContactPage> {
             Row(
               children: [
                 Expanded(
-                  child: CustomTextFieldEdit(
+                  child: CustomTextFieldNumberEdit(
                     controller,
                     hint: 'Insira o CEP',
                     label: 'CEP',
